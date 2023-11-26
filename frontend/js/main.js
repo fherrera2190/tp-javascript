@@ -26,7 +26,7 @@ window.onload = async () => {
     h1.textContent = movie.title;
 
     const divStar = document.createElement("div");
-
+    divStar.style.cursor="pointer"
     if (array.includes(+movie.id)) {
       divStar.classList.add("btnStar", "fa-solid", "fa-star");
     } else {
@@ -65,7 +65,7 @@ window.onload = async () => {
       if (array.includes(+e.target.id)) {
         array = array.filter(id => id !== +e.target.id);
         localStorage.setItem(FAV_ARRAY, JSON.stringify(array));
-        console.log("Si lo tiene");
+       // console.log("Si lo tiene");
         this.classList.remove("fa-solid");
         this.classList.add("fa-regular");
       } else {
